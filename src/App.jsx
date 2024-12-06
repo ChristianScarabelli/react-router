@@ -1,16 +1,31 @@
 import './../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import { BroswerRouter, Routes, route } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import HomePage from './pages/HomePage.jsx'
+import AboutUs from './pages/AboutUs.jsx'
+import PostsList from './pages/PostsList.jsx'
+import DefaultLayout from './layouts/DefaultLayout.jsx'
+import BlankLayout from './layouts/BlankLayout.jsx'
+import NotFound from './pages/NotFound.jsx'
 
 function App() {
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path></Route>
-      </Routes>
-      <h1>..... le mie rotte</h1>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />}>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/aboutus' element={<AboutUs />} />
+            <Route path='/postslist' element={<PostsList />} />
+          </Route>
+          <Route element={<BlankLayout />}>
+            <Route path='*' element={<NotFound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   )
+
 }
 
 export default App
