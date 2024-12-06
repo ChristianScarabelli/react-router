@@ -1,7 +1,7 @@
 export default function HomePage() {
     return (
         <main>
-            <div className="container">
+            <div className="container py-4">
                 <h1>this is the homepage</h1>
 
             </div>

@@ -7,9 +7,9 @@ export default function PostsList() {
         <section className='container'>
             <div className='row'>
                 <div className='col-12'>
-                    <ul>
+                    <ul className='list-group list-group-flush py-4'>
                         {posts.map((post) =>
-                            <li key={post.id}>{post.title}</li>)}
+                            <li key={post.id} className='list-group-item'>{post.title}</li>)}
                     </ul>
                 </div>
             </div>
