@@ -4,11 +4,15 @@ import posts from '../data/Posts.jsx'
 export default function PostsList() {
 
     return (
-        <section>
-            <ul>
-                {posts.map((post) =>
-                    <li key={post.id}>{post.title}</li>)}
-            </ul>
+        <section className='container'>
+            <div className='row'>
+                <div className='col-12'>
+                    <ul>
+                        {posts.map((post) =>
+                            <li key={post.id}>{post.title}</li>)}
+                    </ul>
+                </div>
+            </div>
         </section>
     )
 }

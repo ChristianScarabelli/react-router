@@ -4,10 +4,10 @@ import Footer from './Footer/Footer.jsx'
 
 export default function DefaultLayout() {
     return (
-        <>
+        <div className='d-flex flex-column min-vh-100'>
             <Header />
             <Outlet />
             <Footer />
-        </>
+        </div>
     )
 }
