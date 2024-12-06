@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 // is Active è un oggetto con proprietà booleana, quindi se è true è active
 export default function Navbar() {
     return (
-        <nav>
+        <nav className='bg-dark p-2'>
             <ul className='d-flex align-items-center justify-content-start gap-3 nav nav-underline py-2 ps-2'>
                 <li className='nav-item'>
                     <NavLink className={({ isActive }) =>
