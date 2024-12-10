@@ -26,12 +26,24 @@ export default function Show() {
 
     const navigate = useNavigate() // inizializzo variabile per spostarsi tra le pagine
 
+    // funzione prev post per spostarsi tra i post, dando un id dinamico alla funzione navigate
+    function prevPosthandler() {
+        if (parseInt(id) > 1) { // per non andare con id negativo
+            navigate(`/posts/${parseInt(id) - 1}`)
+        }
+    }
+
+    // funzione next post
+    function nextPostHandler() {
+        navigate(`/posts/${parseInt(id) + 1}`)
+    }
+
     return (
         <main>
             <div className="container my-3">
                 <div className="d-flex align-items-center justify-content-center gap-3">
-                    <button className="btn btn-dark" onClick={() => navigate(-1)}>Prev</button>
-                    <button className="btn btn-dark" onClick={() => navigate(+1)}>Next</button>
+                    <button className="btn btn-dark" onClick={() => prevPosthandler()}>Prev</button>
+                    <button className="btn btn-dark" onClick={() => nextPostHandler()}>Next</button>
                 </div>
             </div>
             {post ?
