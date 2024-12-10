@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom'
 export default function Navbar() {
     return (
         <nav className='bg-dark p-2'>
-            <ul className='d-flex align-items-center justify-content-start gap-3 nav nav-underline py-2 ps-2'>
+            <ul className='d-flex align-items-center justify-content-start gap-3 nav nav-underline py-1 ps-2'>
                 <li className='nav-item'>
                     <NavLink className={({ isActive }) =>
                         `fs-4 nav-link ${isActive ? 'text-warning' : ''}`
@@ -16,13 +16,14 @@ export default function Navbar() {
                 <li className='nav-item'>
                     <NavLink className={({ isActive }) =>
                         `fs-4 nav-link ${isActive ? 'text-warning' : ''}`
-                    } to='/about-us'>About Us</NavLink>
+                    } to='/posts'>Blog</NavLink>
                 </li>
                 <li className='nav-item'>
                     <NavLink className={({ isActive }) =>
                         `fs-4 nav-link ${isActive ? 'text-warning' : ''}`
-                    } to='/posts-list'>List</NavLink>
+                    } to='/about'>About Us</NavLink>
                 </li>
+
             </ul>
         </nav >
     )

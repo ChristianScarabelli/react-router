@@ -3,7 +3,6 @@ export default function HomePage() {
         <main>
             <div className="container py-4">
                 <h1>this is the homepage</h1>
-
             </div>
         </main>
     )
