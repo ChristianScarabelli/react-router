@@ -1,18 +1,20 @@
-import style from './Tags.module.css'
+import style from './Tags.module.css';
 
-export default function Tags({ tags = [] }) {
+export default function Tags({ tags = [], className }) {
     return (
         tags.length > 0 && ( // Mostro i tag solo se esistono
-            <div className={style.tags_container}>
-                {tags.map((tag, index) => ( // genero i tag dinamicamente e aggiornabili tramite l'indice
-                    <span
-                        key={index}
-                        className={`${style.tag} ${style[`tag_${tag}`]}`} // con le [] leggo la propiretà dell'oggetto e costruisco con il `il nome del tag
-                    >
-                        {tag}
-                    </span>
-                ))}
+            <div className='d-flex align-items-center flex-wrap gap-2 text-white'>
+                {tags.map((tag, index) => {
+                    const formattedTag = tag.toLowerCase().replaceAll(' ', '_')      // Formattazione del tag
+                    return (
+                        <span
+                            key={index}
+                            className={`'' ${style[`tag_${formattedTag}`]}`}    // Classe dinamica basata sul tag formattato
+                        >
+                            {tag}
+                        </span>
+                    )
+                })}
             </div>
-        )
-    )
+        ))
 }

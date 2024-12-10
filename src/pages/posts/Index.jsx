@@ -27,9 +27,9 @@ export default function Index() {
 
     return (
         <main>
-            <section>
+            <section className="py-5">
                 <div className="container">
-                    <h2>Blog Posts</h2>
+                    <h2 className="display-4 text-center py-4">Blog Posts</h2>
                 </div>
                 <div className="container">
                     <div className="row row-cols-2">
