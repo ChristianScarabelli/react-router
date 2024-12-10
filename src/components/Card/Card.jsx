@@ -20,7 +20,7 @@ export default function Card({ onDelete = () => { }, post = {} }) {
                     <Tags tags={tags} />
                     <p className="card-text mt-4">{content}</p>
                     <div className="mt-auto d-flex align-items-center justify-content-between">
-                        <Link to={`/post/${id}`}>Vai al post</Link>
+                        <Link to={`/posts/${id}`}>Vai al post</Link>
                         <DeleteButton onDelete={onDelete} />
                     </div>
                 </div>

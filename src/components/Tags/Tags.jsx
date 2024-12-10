@@ -9,7 +9,7 @@ export default function Tags({ tags = [], className }) {
                     return (
                         <span
                             key={index}
-                            className={`'' ${style[`tag_${formattedTag}`]}`}    // Classe dinamica basata sul tag formattato
+                            className={`badge ${style[`tag_${formattedTag}`]}`}    // Classe dinamica basata sul tag formattato
                         >
                             {tag}
                         </span>
