@@ -35,7 +35,8 @@ export default function Index() {
                     <div className="row row-cols-2">
                         {posts.map((post) =>
                             <div key={post.id}>
-                                <Card post={post} />
+                                {/* passo la prop della card onDelete che invoca la callback deletePost, e passo la funzione per rifare il fetch dei post */}
+                                <Card onDelete={() => fetchPosts()} post={post} />
                             </div>
                         )}
                     </div>

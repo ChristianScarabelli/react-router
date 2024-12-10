@@ -4,6 +4,7 @@ import { BASE_URI } from "../../config"
 import { useNavigate, useParams } from "react-router-dom"
 import placeHolderImage from '../../assets/600x400_placeholder.jpg'
 import Tags from "../../components/Tags/Tags"
+import DeletePost from "../../components/posts/DeletePost"
 
 
 export default function Show() {
@@ -42,13 +43,13 @@ export default function Show() {
         <main>
             <div className="container my-3">
                 <div className="d-flex align-items-center justify-content-center gap-3">
-                    <button className="btn btn-dark" onClick={() => prevPosthandler()}>Prev</button>
-                    <button className="btn btn-dark" onClick={() => nextPostHandler()}>Next</button>
+                    <button className="btn btn-dark" onClick={prevPosthandler}>Prev</button>
+                    <button className="btn btn-dark" onClick={nextPostHandler}>Next</button>
                 </div>
             </div>
             {post ?
                 <>
-                    <div className="container">
+                    <div className="container mb-4">
                         <figure>
                             <img className="img-fluid card-img-top" src={post.image ? `${BASE_URI}/${post.image}` : placeHolderImage} alt={post.title} />
                         </figure>
@@ -58,12 +59,13 @@ export default function Show() {
                         <h5 className=" mb-3 mt-2">{`Categoria: ${post.category}`}</h5>
                         <Tags tags={post.tags} />
                         <p className="card-text mt-4 mb-4">{post.content}</p>
+                        <DeletePost id={post.id} onDelete={() => { navigate('/posts/') }} />
                     </div>
                 </> :
                 <>
                     <div className="container py-3">
                         <figure>
-                            <img className="img-fluid card-top-img" src={placeHolderImage} />
+                            <img className="img-fluid card-top-img" src={placeHolderImage} alt="Placeholder Image" />
                         </figure>
                         <div className="placeholder-glow d-flex flex-column">
                             <h2 className="placeholder bg-primary col-4"></h2>
