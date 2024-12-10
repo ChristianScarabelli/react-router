@@ -15,8 +15,8 @@ function App() {
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route index element={<HomePage />} />
-            <Route path='/aboutus' element={<AboutUs />} />
-            <Route path='/postslist' element={<PostsList />} />
+            <Route path='/about-us' element={<AboutUs />} />
+            <Route path='/posts-list' element={<PostsList />} />
           </Route>
           <Route element={<BlankLayout />}>
             <Route path='*' element={<NotFound />} />

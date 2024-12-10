@@ -1,4 +1,4 @@
-import posts from '../data/Posts.jsx'
+import posts from '../data/posts.js'
 // import Card from '../components/Card/Card.jsx'
 
 export default function PostsList() {

@@ -10,15 +10,18 @@ export default function Navbar() {
             <ul className='d-flex align-items-center justify-content-start gap-3 nav nav-underline py-2 ps-2'>
                 <li className='nav-item'>
                     <NavLink className={({ isActive }) =>
-                        isActive ? `text-warning fs-4 nav-link` : 'fs-4 nav-link'} to='/'>Home</NavLink>
+                        `fs-4 nav-link ${isActive ? 'text-warning' : ''}`
+                    } to='/'>Home</NavLink>
                 </li>
                 <li className='nav-item'>
                     <NavLink className={({ isActive }) =>
-                        isActive ? `text-warning fs-4 nav-link` : 'fs-4 nav-link'} to='/aboutus'>About Us</NavLink>
+                        `fs-4 nav-link ${isActive ? 'text-warning' : ''}`
+                    } to='/about-us'>About Us</NavLink>
                 </li>
                 <li className='nav-item'>
                     <NavLink className={({ isActive }) =>
-                        isActive ? `text-warning fs-4 nav-link` : 'fs-4 nav-link'} to='/postslist'>List</NavLink>
+                        `fs-4 nav-link ${isActive ? 'text-warning' : ''}`
+                    } to='/posts-list'>List</NavLink>
                 </li>
             </ul>
         </nav >

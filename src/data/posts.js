@@ -48,7 +48,7 @@ const posts = [
         id: 10,
         title: "C-3PO",
         content: "C-3PO è un droide protocollare fluente in oltre sei milioni di forme di comunicazione."
-    }
+    },
 ]
 
 export default posts
